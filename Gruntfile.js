@@ -124,7 +124,6 @@ module.exports = function(grunt) {
         'mochaTest'
     ]);
 
-
     grunt.registerTask('upload', function(n) {
         if (grunt.option('prod')) {
             // add your production server task here
