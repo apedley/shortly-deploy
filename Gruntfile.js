@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 
         nodemon: {
             dev: {
-                script: 'server.js'
+                script: 'index.js'
             }
         },
 
@@ -126,7 +126,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('upload', function(n) {
         if (grunt.option('prod')) {
-            // add your production server task here
+            // something to upload to heroku
+            // grunt deploy --prod
+            grunt.task.run(['heroku:production']);
         } else {
             grunt.task.run(['server-dev']);
         }
@@ -136,5 +138,5 @@ module.exports = function(grunt) {
         'build',
         'upload'
     ]);
-    grunt.registerTask('heroku:production', 'uglify cssmin');
+    grunt.registerTask('heroku:production', 'build');
 };
