@@ -26,5 +26,5 @@ db.urlsSchema.pre('save', function(next) {
 // });
 
 module.exports = Link;
-var l = new Link({ url: 'http://www.google.com', base_url: 'http://google.com', title: 'google', visits: 0});
-l.save();
+// var l = new Link({ url: 'http://www.google.com', base_url: 'http://google.com', title: 'google', visits: 0});
+// l.save();
