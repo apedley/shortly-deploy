@@ -128,7 +128,7 @@ module.exports = function(grunt) {
         if (grunt.option('prod')) {
             // something to upload to heroku
             // grunt deploy --prod
-            grunt.task.run(['heroku:production']);
+            // grunt.task.run(['heroku:production']);
         } else {
             grunt.task.run(['server-dev']);
         }
@@ -138,5 +138,5 @@ module.exports = function(grunt) {
         'build',
         'upload'
     ]);
-    grunt.registerTask('heroku:production', 'build');
+    grunt.registerTask('heroku:production', ['build']);
 };
