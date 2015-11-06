@@ -42,7 +42,8 @@ describe('', function() {
     describe('Shortening links:', function() {
 
       it('Responds with the short code', function(done) {
-        request(app)
+        // request(app)
+        request()
           .post('/links')
           .send({
             'url': 'http://www.roflzoo.com/'})
