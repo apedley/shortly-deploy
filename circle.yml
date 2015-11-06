@@ -1,0 +1,10 @@
+dependencies:
+  post:
+    - npm install
+# database:
+#   override:
+#     - mongodb
+test:
+  override:
+    - grunt build
+    - grunt test
